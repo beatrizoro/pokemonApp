@@ -1,0 +1,36 @@
+const mongoose = require("mongoose");
+
+
+// STEP 2 - DEFINE THE SCHEMA
+
+
+const userSchema = new mongoose.Schema({
+
+  Name: {
+    type: String,
+    required: true
+  },
+  Email: {
+    type: String,
+    required: true,
+     index: {
+      unique: true
+    },
+    match: /^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$/
+
+  },
+   Password: {
+    type: String,
+    required: true
+  },
+    Age: {
+    type: Number,
+    required: true
+  },
+    Teams: {
+    type: Array
+  }
+
+});
+// STEP 3 - CREATE THE MODEL
+module.exports  = mongoose.model("user", userSchema);

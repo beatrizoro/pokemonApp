@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<div ng-app="myApp" ng-controller = "loginController">
+   
+<div class="row mb-3">
+    <div class="col-sm-1">
+           
+  </div>
+    <div class="col-sm-3">
+  
+  </div>
+  
+  <div class="col-sm-3">
+           <img src="/images/charmander.png" alt="" width="128" height="128">
+  </div>
+
+  </div>
+  <form class="form-signin text-center">
+    <h1 class="h3 mb-3">Please sign in</h1>
+  
+    <input ng-model="email" type="email" class="form-control mb-3" placeholder="Email Address" required autofocus/>
+    <input ng-model="password" type="password" class="form-control mb-3" placeholder="Password" required/>
+    <button ng-click="login(email,password)" class="btn btn-lg btn-primary btn-block">Sign in</button>
+  
+   <p>{{status}} </p>
+  </form>
+
+  <div class="alert alert-primary">
+    Don't have an account? <a href="#!/register">Register!</a>
+  </div>
+ </div>
+</html>

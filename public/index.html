@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Pokemon App</title>
+ <img src="/images/pikachu.png" width="128" height="128" class="icon"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body >
+<div class = "container">
+  <div class = "jumbotron p-3" ng-controller="mainController" >
+    <h2> Pokemon App </h2>
+     <div class="row mb-3">
+
+           <div class="col-sm-2">
+      <a href="#!/">Home</a> 
+    </div>
+    <div class="col-sm-2">
+      <a href="#!/login">Login</a> 
+    </div>
+       
+    <div class="col-sm-2">
+    <a href="#!/register">Register</a> 
+    </div>
+       
+    <div class="col-sm-2">
+    <a href="#!/showpokedex">Pokedex</a> 
+    </div>
+
+  </div>
+  </div>
+
+<div class = "jumbotron p-3">
+    <div ng-view> </div>
+  </div>
+ </div> 
+
+
+  
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+<script src = "https://code.angularjs.org/1.8.2/angular-route.min.js"> </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    
+  <script>
+     let myApp = angular.module("myApp", ["ngRoute"]);
+
+      myApp.config(function($routeProvider) {
+        $routeProvider
+          
+        .when("/", { //Home View
+          templateUrl: "/views/home.html",
+          controller: "homeController"
+        })
+          
+     .when("/login", { //Home View
+          templateUrl: "/views/login.html",
+          controller: "loginController"
+        })
+          
+             .when("/register", { //Home View
+          templateUrl: "/views/register.html",
+          controller: "registerController"
+        })
+          
+          .when("/showpokedex", { //Home View
+          templateUrl: "/views/showpokedex.html",
+          controller: "showpokedexController"
+        })
+          
+         .when("/trainerview", { //Home View
+          templateUrl: "/views/trainerview.html",
+          controller: "trainerviewController"
+        })
+         .when("/trainershowpokedex", { //Home View
+          templateUrl: "/views/innerview/trainershowpokedex.html",
+          controller: "trainershowpokedexController"
+        })
+        .when("/trainershowtrainer", { //Home View
+          templateUrl: "/views/innerview/trainershowtrainer.html",
+          controller: "trainershowtrainerController"
+        })
+      })
+
+
+      myApp.controller("mainController", function($scope, $http) {
+          
+       });
+
+    
+     
+
+
+    
+    
+  </script> 
+
+
+
+
+
+
+
+    
+<body>
+        
+ <script src="/controllers/home.js"></script>
+<script src="/controllers/login.js"></script>
+<script src="/controllers/register.js"></script>
+<script src="/controllers/showpokedex.js"></script>
+  <script src="/controllers/trainerview.js"></script>
+    <script src="/controllers/trainershowpokedex.js"></script>
+      <script src="/controllers/trainershowtrainer.js"></script>
+ <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</body>
+
+</html>
