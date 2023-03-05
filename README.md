@@ -1,5 +1,6 @@
 # pokemonApp 
 https://PokemonAppV2.beor.repl.co
+<ul></ul> 
 Background
   <ul> Pokemon is a well-known franchise. In the world of Pokémon, there are pokemon and Trainers. Pokemon are animals with interesting attributes and Trainers is the term commonly used for a person who catches and trains Pokémon. Usually, the goal of trainers is to catch ‘em all.</ul> 
 
@@ -10,14 +11,18 @@ Proposal
 Views:
 <ul> 
   Without logging in:
-    <li>Home</li>
-   <li> Log in 
-   <li> Register</li>
-   <li> Pokedex Lookup - to cassually look at the avaible pokemon </li>
+   <ul>  
+     <li>Home</li>
+     <li> Log in 
+     <li> Register</li>
+     <li> Pokedex Lookup - to cassually look at the avaible pokemon </li>
+     </ul> 
   After logging in:
+  <ul> 
     <li>Account - shows name and pokemon captured from user</li>
     <li>Trainer Lookup - shows name, age, email of all users</li>
     <li>TrainerPokedexlookup to add pokemon from the pokedexlist</li>
+   </ul> 
 </ul> 
 
 Application Behavior:
