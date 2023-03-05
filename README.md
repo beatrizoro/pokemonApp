@@ -8,7 +8,9 @@ https://PokemonAppV2.beor.repl.co
 ![image](https://user-images.githubusercontent.com/51274827/222938050-0d208ffc-e4c3-44d6-bbed-69d4ea18e5a1.png)
 
 It incorporate all the below components/technologies:
-<ul> SPA (Single Page Application)
-Node w/Express
-MongoDB for storage
-AngularJS for the front-end.
+<ul> 
+  <li> SPA (Single Page Application)</li>
+  <li> Node w/Express</li>
+  <li> MongoDB for storage</li>
+  <li> AngularJS for the front-end.</li>
+</ul> 
