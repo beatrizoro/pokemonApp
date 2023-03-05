@@ -10,53 +10,15 @@ Proposal
 Views:
 <ul> 
   Without logging in:
-    Home
-    Log in 
-    Register
-    Pokedex Lookup - to cassually look at the avaible pokemon 
+    <li>Home</li>
+   <li> Log in 
+   <li> Register</li>
+   <li> Pokedex Lookup - to cassually look at the avaible pokemon </li>
   After logging in:
-    Account - shows name and pokemon captured from user
-    Trainer Lookup - shows name, age, email of all users
-    TrainerPokedexlookup to add pokemon from the pokedexlist
+    <li>Account - shows name and pokemon captured from user</li>
+    <li>Trainer Lookup - shows name, age, email of all users</li>
+    <li>TrainerPokedexlookup to add pokemon from the pokedexlist</li>
 </ul> 
-
-Models:
-<ul> 
-  Pokemon: It can handle the following requests.
-    //get all pokemon
-    router.get("/", (req, res) => 
-    // POST (New Pokemon)
-    router.post("/", (req, res) => 
-    //find pokemon based on pokemon name or type
-    router.get("/:id", (req, res) => 
-    //find pokemon based on pokemon name 
-    router.get("/name=/:id", (req, res) 
-  User:
-    // GET (Read All Users)
-    router.get("/", (req, res) => {
-
-    // POST (New User)
-    router.post("/", (req, res) => {
-
-    // POST Log in
-    router.post("/login", (req, res) => {
-  
-    //Post Register
-    router.post("/register", (req, res) => {
-
-    //find user by name or email
-    router.get("/:id", (req, res) => {
- 
-
-
-    //add pokemon to your team
-    router.patch("/:id", (req, res) => {
-    
-    })
-</ul> 
-
-
-
 
 Application Behavior:
 <ul>  The application will not load pages Account, Trainer lookup, TrainerPokedexlookup without loggin in. If going to those views without loggin in (session (username="")) will result in a redirect to home page and an alert.
