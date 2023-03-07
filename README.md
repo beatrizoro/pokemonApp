@@ -1,4 +1,4 @@
-# pokemonApp 
+# PokemDex
 https://PokemonAppV2.beor.repl.co
 <ul></ul> 
 Background
